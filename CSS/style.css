@@ -112,3 +112,39 @@ footer{
 footer p{
     text-align: center;
 }
+header .icons{
+    display: none;
+}
+.fa-bars{
+    padding-top: 25px;
+}
+@media only screen and (width<=1000px) {
+    .logo p{
+        font-size: 40px;
+    }
+    header .icons{
+        display: block;
+        font-size: 25px;
+        cursor: pointer;
+    }
+    .nav-links{
+        top: 0;
+        right: -250px;
+        position: fixed;
+        width: 250px;
+        height: 100vh;
+        padding-top: 50px;
+        z-index: 1;
+        background-color: black;
+        transition: right 0.5s;
+    }
+    .nav-links ul{
+        display: block;
+        margin: 25px;
+    }
+    .nav-links ul .fa-circle-xmark{
+        position: absolute;
+        top: 50px;
+        left: 25px;
+    }
+}

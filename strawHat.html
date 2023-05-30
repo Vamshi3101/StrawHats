@@ -16,24 +16,26 @@
 </head>
 <body>
     <header>
-        <div class="container flex-container">
+        <div class="container flex-container" id = "home">
             <div class="logo">
                 <img src="./Images/logo.png" alt="logo">
                 <p>Straw Hats</p>
             </div>
             <div class="nav-links">
                 <ul>
-                    <li><a href="#">Home</a></li>
+                    <li><a href="#home">Home</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#characters">Wanted Posters</a></li>
+                    <i class="fa-solid fa-circle-xmark icons" style="color: #ffffff;"></i>
                 </ul>
             </div>
+            <i class="fa-sharp fa-solid fa-bars icons" style="color: #ffffff;"></i>
         </div>
     </header>
     <main>
-        <div class="container" id="about">
+        <div class="container">
             <div class="image-center"><img src="./Images/Crew2.avif" alt="straw hat crew memebers" class="bg-cover"></div>
-            <h1>About</h1>
+            <h1 id="about">About</h1>
             <p>One Piece is a Japanese manga series written and illustrated by Eiichiro Oda. It has been serialized in Shueisha's shōnen manga magazine Weekly Shōnen Jump since July 1997. The story follows the adventures of Monkey D. Luffy and his crew, the Straw Hat Pirates, where he explores the Grand Line in search of the mythical treasure known as the "One Piece" in order to become the next King of the Pirates. One Piece has received praise for its storytelling, world-building, art, characterization, and humor. It has received many awards and is ranked by critics, reviewers, and readers as one of the best manga of all time. As of August 2022, it had over 516.6 million copies in circulation in 61 countries and regions worldwide, making it the best-selling manga series in history, and the best-selling comic series printed in book volume. Several volumes of the manga have broken publishing records, including the highest initial print run of any book in Japan. In 2015 and 2022, One Piece set the Guinness World Record for "the most copies published for the same comic book series by a single author". It was the best-selling manga for eleven consecutive years from 2008 to 2018, and is the only manga that had an initial print of volumes of above 3 million continuously for more than 10 years.</p>
         </div>
         <div class="container" id = "characters">
@@ -130,8 +132,17 @@
             </div>
         </div>
     </main>
-    <footer>
+    <footer> 
         <p>Copyright &copy; Vamshi</p>
     </footer>
+    <script src="https://kit.fontawesome.com/039b41251e.js" crossorigin="anonymous"></script>
+    <script>
+        document.querySelector(".fa-bars").addEventListener("click",()=>{
+            document.querySelector(".nav-links").style.right = "0";
+        })
+        document.querySelector(".fa-circle-xmark").addEventListener("click",()=>{
+            document.querySelector(".nav-links").style.right = "-250px"
+        })
+    </script>
 </body>
 </html>
