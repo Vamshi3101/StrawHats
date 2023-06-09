@@ -24,9 +24,9 @@
             </div>
             <div class="nav-links">
                 <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#characters">Wanted Posters</a></li>
+                    <li class="nav-li"><a href="#home">Home</a></li>
+                    <li class="nav-li"><a href="#about">About</a></li>
+                    <li class="nav-li"><a href="#characters">Wanted Posters</a></li>
                     <i class="fa-solid fa-circle-xmark icons" style="color: #ffffff;"></i>
                 </ul>
             </div>
@@ -144,6 +144,11 @@
         document.querySelector(".fa-circle-xmark").addEventListener("click",()=>{
             document.querySelector(".nav-links").style.right = "-250px"
         })
+        for(var i = 0;i<document.querySelectorAll(".nav-li").length;i++){
+            document.querySelectorAll(".nav-li")[i].addEventListener("click",()=>{
+                document.querySelector(".nav-links").style.right = "-250px"
+            })
+        }
     </script>
 </body>
 </html>
